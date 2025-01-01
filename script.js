@@ -15,7 +15,7 @@ getNumbers()
         const evenNumbers = numbers.filter((num) => num % 2 === 0);
         document.getElementById("output").textContent = evenNumbers.join(", ");
         resolve(evenNumbers);
-      }, 1000); // Delay of 1 second
+      }, 4000); // Delay of 1 second
     });
   })
   .then((evenNumbers) => {
