@@ -3,7 +3,7 @@ function getNumbers() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve([1, 2, 3, 4]);
-    }, 3000);
+    }, 0); // Resolve immediately
   });
 }
 
@@ -14,7 +14,7 @@ getNumbers()
         const evenNumbers = numbers.filter((num) => num % 2 === 0);
         document.getElementById("output").textContent = evenNumbers.join(", ");
         resolve(evenNumbers);
-      }, 4000); // Delay of 1 second
+      }, 1000); // Delay of 1 second
     });
   })
   .then((evenNumbers) => {
@@ -24,7 +24,7 @@ getNumbers()
         document.getElementById("output").textContent =
           multipliedNumbers.join(", ");
         resolve(multipliedNumbers);
-      }, 6000); // Delay of 2 seconds
+      }, 2000); // Total delay of 2 seconds
     });
   })
   .catch((err) => console.error(err));
